@@ -1,5 +1,11 @@
-import { Brand } from "@/types/brand";
 import Image from "next/image";
+
+export type Brand = {
+  id: number;
+  name: string;
+  href: string;
+  image: string;
+};
 
 const brandsData: Brand[] = [
   {

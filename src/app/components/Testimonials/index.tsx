@@ -1,4 +1,12 @@
-import { Testimonial } from "@/types/testimonial";
+export type Testimonial = {
+  id: number;
+  name: string;
+  designation: string;
+  content: string;
+  image: string;
+  star: number;
+};
+
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
 
