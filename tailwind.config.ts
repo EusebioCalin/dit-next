@@ -21,6 +21,7 @@ const config: Config = {
       dark: "#1D2144",
       primary: "#4A6CF7",
       yellow: "#FBB040",
+      amber: 'rgb(245 158 11)',
       "body-color": "#959CB1",
     },
     screens: {

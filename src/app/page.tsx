@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Features/>
+      <Features />
       <Brands />
       <AboutSectionOne />
       <AboutSectionTwo />

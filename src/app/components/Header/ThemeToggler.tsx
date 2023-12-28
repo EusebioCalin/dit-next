@@ -1,7 +1,9 @@
 import { useTheme } from "next-themes";
 
 const ThemeToggler = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, forcedTheme } = useTheme();
+  const disabled = !!forcedTheme;
+  if (disabled) return null;
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
