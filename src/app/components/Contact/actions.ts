@@ -18,10 +18,13 @@ export interface EmailType {
 export const handleEmailSubmit = async (data: EmailType) => {
 
   console.log('VERCEL_URL', process.env.VERCEL_URL)
-  const url = process.env.VERCEL_URL || process.env.NEXT_PUBLIC_VERCEL_URL
+  const url =
+    process.env.VERCEL_URL
+      ? process.env.VERCEL_URL + 'api/sendEmail'
+      : process.env.NEXT_PUBLIC_VERCEL_URL + '/api/sendEmail'
   console.log('url', url)
   try {
-    const res = await axios.post(`${url}/api/sendEmail`, data)
+    const res = await axios.post(url, data)
     console.log(res) //check now
   } catch (e) {
     console.log('e', e)
