@@ -25,7 +25,8 @@ export const handleEmailSubmit = async (data: EmailType) => {
   console.log('url', url)
   try {
     const res = await axios.post(url, data)
-    console.log(res) //check now
+    console.log('response', res) //check now
+    return res.data
   } catch (e) {
     console.log('e', e)
   }

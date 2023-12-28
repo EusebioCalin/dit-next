@@ -16,8 +16,10 @@ export async function POST(request: NextRequest) {
       data.message
     );
     console.log('res', res)
+    return NextResponse.json({ response: 'OK', status: 200 })
+
   } catch (e) {
     console.log('e', e)
+    return Response.error()
   }
-  return Response.json(data)
 }
