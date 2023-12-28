@@ -16,9 +16,7 @@ export interface EmailType {
 }
 
 export const handleEmailSubmit = async (data: EmailType) => {
-
-  console.log('data', data)
-  const url = process.env.URL || 'http://localhost:3000'
+  const url = process.env.NEXT_PUBLIC_VERCEL_URL || 'test'
   console.log('url', url)
   try {
     const res = await axios.post(`${url}/api/sendEmail`, data)
